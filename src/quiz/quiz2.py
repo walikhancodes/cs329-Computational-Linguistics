@@ -44,13 +44,10 @@ def paths(sense_0: str, sense_1: str) -> List[List[Synset]]:
     # TODO: to be updated
     path1 = []
     path2 = []
-    result = []
     walk1 = wn.synset(sense_0)
     walk2 = wn.synset(sense_1)
     a = walk1.hypernym_paths()
     b = walk2.hypernym_paths()
-    n = len(a)
-    m = len(b)
     lch = walk1.lowest_common_hypernyms(walk2)
     final = []
     for hypernym in lch:
